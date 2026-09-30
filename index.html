@@ -136,9 +136,25 @@
     <h2>Tugas & Project Kuliah (Showcase)</h2>
     <p class="section-subtitle">Berikut adalah beberapa project analisis sistem, data analytics, UI/UX design, dan tugas perkuliahan yang telah saya kerjakan:</p>
 
+    <!-- PROJECT FILTER -->
+    <div class="project-filter-wrap" aria-label="Filter project berdasarkan bidang">
+      <div class="project-filter-label"><i class="fa-solid fa-filter"></i> Lihat berdasarkan bidang</div>
+      <div class="project-filters" role="group" aria-label="Project categories">
+        <button type="button" class="project-filter active" data-filter="all" aria-pressed="true">Semua</button>
+        <button type="button" class="project-filter" data-filter="system-analysis" aria-pressed="false"><i class="fa-solid fa-diagram-project"></i> System Analysis</button>
+        <button type="button" class="project-filter" data-filter="uiux" aria-pressed="false"><i class="fa-solid fa-pen-ruler"></i> UI/UX</button>
+        <button type="button" class="project-filter" data-filter="data-analytics" aria-pressed="false"><i class="fa-solid fa-chart-line"></i> Data Analytics</button>
+        <button type="button" class="project-filter" data-filter="database" aria-pressed="false"><i class="fa-solid fa-database"></i> Database</button>
+        <button type="button" class="project-filter" data-filter="web-development" aria-pressed="false"><i class="fa-solid fa-code"></i> Web Development</button>
+        <button type="button" class="project-filter" data-filter="architecture" aria-pressed="false"><i class="fa-solid fa-layer-group"></i> Architecture</button>
+        <button type="button" class="project-filter" data-filter="ai" aria-pressed="false"><i class="fa-solid fa-brain"></i> AI / ML</button>
+      </div>
+      <div class="project-filter-result" aria-live="polite">Menampilkan <strong id="projectCount">7</strong> project</div>
+    </div>
+
     <div class="projects-grid">
       <!-- PROJECT BINUS CONNECT -->
-      <div class="project-card">
+      <div class="project-card" data-category="system-analysis architecture database">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div>
           <div class="project-tag">Official University Project</div>
@@ -182,7 +198,7 @@
       </div>
 
       <!-- PROJECT DATA MODELLING & WELFARE ANALYTICS -->
-      <div class="project-card">
+      <div class="project-card" data-category="data-analytics database">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-chart-column"></i></div>
           <div class="project-tag">Data Modeling</div>
@@ -226,7 +242,7 @@
       </div>
 
       <!-- PROJECT MONEYRV UI/UX -->
-      <div class="project-card">
+      <div class="project-card" data-category="uiux">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-coins"></i></div>
           <div class="project-tag">UI/UX Design Case Study</div>
@@ -271,7 +287,7 @@
       </div>
 
       <!-- CARE & REPAIR PROJECT -->
-      <div class="project-card">
+      <div class="project-card" data-category="system-analysis database architecture">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-shirt"></i></div>
           <div class="project-tag">Database & System Design</div>
@@ -315,7 +331,7 @@
       </div>
 
       <!-- WEB DEVELOPMENT PROJECT (FURNILAND) -->
-      <div class="project-card">
+      <div class="project-card" data-category="web-development database system-analysis">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-couch"></i></div>
           <div class="project-tag">Tugas Project Web</div>
@@ -367,7 +383,7 @@
       </div>
 
       <!-- PROJECT RUMAH SAKIT -->
-      <div class="project-card">
+      <div class="project-card" data-category="system-analysis database architecture data-analytics ai">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-hospital"></i></div>
           <div class="project-tag">Database Systems & Data Warehouse</div>
@@ -417,7 +433,7 @@
       </div>
 
       <!-- PERSONAL PROJECT: PYTHON FLASK WEATHER & QUIZ APP -->
-      <div class="project-card">
+      <div class="project-card" data-category="web-development database data-analytics ai">
         <div class="project-card-head">
           <div class="project-icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
           <div class="project-tag">Personal Project</div>
@@ -724,6 +740,41 @@
         closeModal();
       }
     });
+
+    // --- PROJECT FILTER ---
+    (function () {
+      const filterButtons = document.querySelectorAll('.project-filter');
+      const projectCards = document.querySelectorAll('.project-card[data-category]');
+      const projectCount = document.getElementById('projectCount');
+
+      function applyProjectFilter(filter) {
+        let visibleCount = 0;
+
+        projectCards.forEach((card) => {
+          const categories = card.dataset.category.split(/\s+/);
+          const show = filter === 'all' || categories.includes(filter);
+
+          card.classList.toggle('is-filtered-out', !show);
+          if (show) visibleCount++;
+        });
+
+        if (projectCount) projectCount.textContent = visibleCount;
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+
+          filterButtons.forEach((btn) => {
+            const active = btn === button;
+            btn.classList.toggle('active', active);
+            btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+
+          applyProjectFilter(filter);
+        });
+      });
+    })();
 
     // --- SCROLL SPY: navbar ikut berubah warna sesuai section aktif ---
     (function () {
