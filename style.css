@@ -443,7 +443,79 @@ body::after {
 .metric-desc { font-size: .84rem; color: var(--text-muted); line-height: 1.5; margin: 0; position: relative; z-index: 1; }
 
 /* ---------- PROJECTS (violet) ---------- */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 1.6rem; align-items: stretch; margin-top: 2rem; }
+.project-filter-wrap {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.1rem;
+  background: rgba(15, 23, 42, .52);
+  border: 1px solid rgba(var(--accent-rgb), .18);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, .25);
+}
+
+.project-filter-label {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text-soft);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  margin-bottom: .75rem;
+}
+
+.project-filter-label i { color: var(--accent); }
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.project-filter {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, .035);
+  color: var(--text-muted);
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  transition: background .25s ease, border-color .25s ease, color .25s ease, transform .25s var(--ease), box-shadow .25s ease;
+}
+
+.project-filter:hover {
+  color: #fff;
+  border-color: rgba(var(--accent-rgb), .45);
+  background: rgba(var(--accent-rgb), .1);
+  transform: translateY(-2px);
+}
+
+.project-filter.active {
+  color: #fff;
+  background: rgba(var(--accent-rgb), .2);
+  border-color: rgba(var(--accent-rgb), .65);
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), .18);
+}
+
+.project-filter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.project-filter-result {
+  margin-top: .75rem;
+  color: var(--text-muted);
+  font-size: .76rem;
+}
+
+.project-filter-result strong { color: var(--accent); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 1.6rem; align-items: stretch; margin-top: 0; }
 
 .project-card {
   position: relative;
@@ -470,6 +542,10 @@ body::after {
 }
 
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 28px 60px rgba(2, 6, 23, .65), 0 0 50px rgba(var(--accent-rgb), .22); }
+
+.project-card.is-filtered-out {
+  display: none;
+}
 .project-card > * { position: relative; }
 
 /* header row: ikon khas project + tag, biar langsung ketebak project apa dari bentuknya */
@@ -921,6 +997,10 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; hei
 }
 
 @media (max-width: 560px) {
+  .project-filter-wrap { padding: .9rem; }
+  .project-filters { gap: .45rem; }
+  .project-filter { padding: .5rem .72rem; font-size: .74rem; }
+
   .timeline { padding-left: 1.5rem; }
   .timeline-item::before { left: -1.5rem; }
   .timeline::before { left: 4px; }
