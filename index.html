@@ -15,17 +15,17 @@
   <nav class="navbar">
     <div class="logo">Shanti Widyanti</div>
     <ul class="nav-links">
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#experience">Pengalaman</a></li>
-      <li><a href="#projects">Tugas & Project Kuliah</a></li>
-      <li><a href="#certifications">Sertifikasi</a></li>
-      <li><a href="#research">Riset</a></li>
-      <li><a href="#skills">Keahlian</a></li>
+      <li><a href="#about" data-accent="indigo">Tentang</a></li>
+      <li><a href="#experience" data-accent="cyan">Pengalaman</a></li>
+      <li><a href="#projects" data-accent="violet">Tugas & Project Kuliah</a></li>
+      <li><a href="#certifications" data-accent="amber">Sertifikasi</a></li>
+      <li><a href="#research" data-accent="teal">Riset</a></li>
+      <li><a href="#skills" data-accent="pink">Keahlian</a></li>
     </ul>
   </nav>
 
 <!-- HERO / ABOUT SECTION -->
-  <header id="about" class="hero-container">
+  <header id="about" class="hero-container" data-accent="indigo">
     <div class="hero-content">
       <div class="profile-info">
         <span class="badge">Information Systems Student @ BINUS University</span>
@@ -38,7 +38,7 @@
       <div class="contact-card">
         <h3>Get in Contact <i class="fa-solid fa-paper-plane"></i></h3>
         <p>Mari terhubung untuk kolaborasi, project, atau peluang karir!</p>
-        
+
         <div class="contact-links">
           <a href="mailto:Shantiwidyanti10@gmail.com" class="contact-item">
             <i class="fa-solid fa-envelope"></i>
@@ -54,10 +54,9 @@
           </a>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-          <a href="mailto:Shantiwidyanti10@gmail.com" class="btn-primary" style="display: block; text-align: center; text-decoration: none;">Kirim Email Sekarang</a>
-          
-          <a href="https://drive.google.com/drive/folders/1UShjAXVJcYZpgLvP5XNLveHYW_CDOvlb?usp=sharing" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; background: transparent; border: 1px solid #38bdf8; color: #38bdf8; border-radius: 8px; font-weight: 600; text-decoration: none; box-sizing: border-box;">
+        <div class="hero-actions">
+          <a href="mailto:Shantiwidyanti10@gmail.com" class="btn-primary">Kirim Email Sekarang</a>
+          <a href="https://drive.google.com/drive/folders/1UShjAXVJcYZpgLvP5XNLveHYW_CDOvlb?usp=sharing" target="_blank" class="btn-outline">
             <i class="fa-solid fa-file-pdf"></i> Lihat CV (PDF)
           </a>
         </div>
@@ -67,16 +66,17 @@
   </header>
 
   <!-- PENGALAMAN KERJA -->
-  <section id="experience" class="section">
+  <section id="experience" class="section" data-accent="cyan" data-num="02">
+    <span class="section-eyebrow">Bab 02 &middot; Track Record</span>
     <h2>Pengalaman Kerja</h2>
     <div class="timeline">
-      
+
       <!-- CHAMP CODE ACADEMY -->
       <div class="timeline-item">
-        <div class="job-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-          <img src="champ code logo.png" alt="Champ Code Academy Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; padding: 4px;">
+        <div class="job-header">
+          <img src="champ code logo.png" alt="Champ Code Academy Logo" class="job-logo">
           <div>
-            <h3 style="margin: 0;">Full Time Coding Tutor</h3>
+            <h3>Full Time Coding Tutor</h3>
             <span class="company">Champ Code Academy Pte. Ltd. | Des 2025 - Sekarang</span>
           </div>
         </div>
@@ -95,7 +95,7 @@
           </div>
 
           <div class="metric-card">
-            <span class="metric-number">8–21%</span>
+            <span class="metric-number">10–15%</span>
             <span class="metric-title">Conversion Rate</span>
             <p class="metric-desc">Melakukan sales pitch teknis kepada orang tua siswa internasional untuk konversi kelas lanjutan.</p>
           </div>
@@ -104,10 +104,10 @@
 
       <!-- TIMEDOOR INDONESIA -->
       <div class="timeline-item">
-        <div class="job-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-          <img src="timedoor logo.png" alt="Timedoor Academy Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; padding: 4px;">
+        <div class="job-header">
+          <img src="timedoor logo.png" alt="Timedoor Academy Logo" class="job-logo">
           <div>
-            <h3 style="margin: 0;">Part Time Coding Tutor</h3>
+            <h3>Part Time Coding Tutor</h3>
             <span class="company">PT Timedoor Indonesia | Nov 2025 – Jan 2026</span>
           </div>
         </div>
@@ -131,30 +131,21 @@
   </section>
 
   <!-- TUGAS & PROJECT KULIAH -->
-  <section id="projects" class="section bg-light">
+  <section id="projects" class="section" data-accent="violet" data-num="03">
+    <span class="section-eyebrow">Bab 03 &middot; Showcase</span>
     <h2>Tugas & Project Kuliah (Showcase)</h2>
     <p class="section-subtitle">Berikut adalah beberapa project analisis sistem, data analytics, UI/UX design, dan tugas perkuliahan yang telah saya kerjakan:</p>
 
     <div class="projects-grid">
       <!-- PROJECT BINUS CONNECT -->
       <div class="project-card">
-        <div class="project-tag">Official University Project</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <div class="project-tag">Official University Project</div>
+        </div>
         <h3>BINUS E-Connect</h3>
         <p class="project-role">Peran: System Analyst (ISPM 2025)</p>
-        
-        <p>
-          Platform terintegrasi untuk menyatukan informasi event kampus, forum diskusi Binusian, dan marketplace mahasiswa agar tidak tercecer di berbagai media sosial.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Tanggung Jawab System Analyst:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li>Merumuskan Functional & Non-Functional Requirements sistem.</li>
-            <li>Membuat Use Case Diagram & Use Case Description lengkap untuk semua aktor.</li>
-            <li>Mendesain Entity Relationship Diagram (ERD) untuk pemodelan basis data.</li>
-            <li>Menyusun System Sequence Diagram (SSD) untuk pemetaan alur interaksi sistem.</li>
-          </ul>
-        </div>
+        <p class="project-tagline">Platform kampus all-in-one: event, forum diskusi, & marketplace mahasiswa.</p>
 
         <div class="tech-stack">
           <span>Visual Paradigm</span>
@@ -164,31 +155,41 @@
           <span>Requirement Analysis</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px;">
-          <a href="https://docs.google.com/document/d/1H4TX1ekT71-Fikq9TQCBHJDlYEk7hm5HtUCLt04jzuY/edit?usp=sharing" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-file-word"></i> Lihat Dokumen BRD & Analisis Lengkap <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & dokumen</summary>
+          <div class="project-details-body">
+            <p>
+              Platform terintegrasi untuk menyatukan informasi event kampus, forum diskusi Binusian, dan marketplace mahasiswa agar tidak tercecer di berbagai media sosial.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Tanggung Jawab System Analyst:</strong>
+              <ul>
+                <li>Merumuskan Functional & Non-Functional Requirements sistem.</li>
+                <li>Membuat Use Case Diagram & Use Case Description lengkap untuk semua aktor.</li>
+                <li>Mendesain Entity Relationship Diagram (ERD) untuk pemodelan basis data.</li>
+                <li>Menyusun System Sequence Diagram (SSD) untuk pemetaan alur interaksi sistem.</li>
+              </ul>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://docs.google.com/document/d/1H4TX1ekT71-Fikq9TQCBHJDlYEk7hm5HtUCLt04jzuY/edit?usp=sharing" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-file-word"></i> Lihat Dokumen BRD & Analisis Lengkap <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- PROJECT DATA MODELLING & WELFARE ANALYTICS -->
       <div class="project-card">
-        <div class="project-tag">Data Modeling</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="project-tag">Data Modeling</div>
+        </div>
         <h3>Indonesia Social Welfare Data Modeling & Dashboard Analysis</h3>
         <p class="project-role">Peran: Data Analyst</p>
-
-        <p>
-          Laporan data modelling ini disusun untuk menganalisis tingkat kesejahteraan masyarakat di Indonesia melalui berbagai indikator ekonomi dan sosial yang terdapat pada dataset. Data yang digunakan meliputi informasi mengenai upah pekerja per jam, Upah Minimum Provinsi (UMP), rata-rata pengeluaran per kapita, serta garis kemiskinan di berbagai provinsi Indonesia.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Sorotan Analisis & Pengolahan Data:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li>Klasifikasi data multi-dimensi berdasarkan tahun, wilayah, kategori pengeluaran, dan provinsi untuk melihat tren ekonomi dari waktu ke waktu.</li>
-            <li>Pengolahan dan pemodelan data menggunakan tabel relasional serta <em>Pivot Table</em> untuk evaluasi variabel indikator sosial.</li>
-            <li>Visualisasi data interaktif melalui <em>Dashboard & Chart</em> untuk mengidentifikasi pola dan hubungan antar variabel sebagai bahan pengambilan keputusan.</li>
-          </ul>
-        </div>
+        <p class="project-tagline">Analisis kesejahteraan Indonesia lewat data upah, UMP, & pengeluaran.</p>
 
         <div class="tech-stack">
           <span>Data Analytics</span>
@@ -199,32 +200,40 @@
           <span>Pivot Tables & Charts</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px;">
-          <a href="https://docs.google.com/document/d/1qeNh6-h_J7fjF4v2lK4pxxmwl5dle7KojyC-Yb68Y24/edit?usp=sharing" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-file-word"></i> Buka Dokumen Analytics Lengkap (Google Docs) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & dokumen</summary>
+          <div class="project-details-body">
+            <p>
+              Laporan data modelling ini disusun untuk menganalisis tingkat kesejahteraan masyarakat di Indonesia melalui berbagai indikator ekonomi dan sosial yang terdapat pada dataset. Data yang digunakan meliputi informasi mengenai upah pekerja per jam, Upah Minimum Provinsi (UMP), rata-rata pengeluaran per kapita, serta garis kemiskinan di berbagai provinsi Indonesia.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Sorotan Analisis & Pengolahan Data:</strong>
+              <ul>
+                <li>Klasifikasi data multi-dimensi berdasarkan tahun, wilayah, kategori pengeluaran, dan provinsi untuk melihat tren ekonomi dari waktu ke waktu.</li>
+                <li>Pengolahan dan pemodelan data menggunakan tabel relasional serta <em>Pivot Table</em> untuk evaluasi variabel indikator sosial.</li>
+                <li>Visualisasi data interaktif melalui <em>Dashboard & Chart</em> untuk mengidentifikasi pola dan hubungan antar variabel sebagai bahan pengambilan keputusan.</li>
+              </ul>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://docs.google.com/document/d/1qeNh6-h_J7fjF4v2lK4pxxmwl5dle7KojyC-Yb68Y24/edit?usp=sharing" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-file-word"></i> Buka Dokumen Analytics Lengkap (Google Docs) <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- PROJECT MONEYRV UI/UX -->
       <div class="project-card">
-        <div class="project-tag">UI/UX Design Case Study</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-coins"></i></div>
+          <div class="project-tag">UI/UX Design Case Study</div>
+        </div>
         <h3>MoneyRV - Antique Currency Marketplace</h3>
         <p class="project-role">Peran: UI/UX Designer</p>
-        <p>
-          Perancangan antarmuka dan pengalaman pengguna untuk aplikasi jual beli uang kuno/jadul. Dirancang untuk memudahkan kolektor bertransaksi serta berdiskusi dalam komunitas numismatik.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Fitur & Alur Utama Aplikasi:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li><strong>Authentication:</strong> Alur Sign In & Sign Up pengguna yang intuitif.</li>
-            <li><strong>Community Forum:</strong> Wadah diskusi antar kolektor uang kuno.</li>
-            <li><strong>Articles Section:</strong> Edukasi & berita seputar nilai sejarah uang kuno.</li>
-            <li><strong>MoneyShop:</strong> Katalog e-commerce khusus transaksi uang kuno.</li>
-            <li><strong>User Profile:</strong> Manajemen akun dan riwayat aktivitas pengguna.</li>
-          </ul>
-        </div>
+        <p class="project-tagline">Desain UI/UX marketplace jual-beli uang kuno untuk komunitas kolektor.</p>
 
         <div class="tech-stack">
           <span>Figma</span>
@@ -234,31 +243,42 @@
           <span>Mobile App Design</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px;">
-          <a href="https://www.figma.com/proto/79i3NaVEoro7jZ8I7Svd6N/MoneyRV?node-id=1-2&t=kXWutJ1D7HU70wGa-1" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #a855f7; text-decoration: none; font-weight: 600;">
-            <i class="fa-brands fa-figma"></i> Coba Interactive Prototype di Figma <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & prototype</summary>
+          <div class="project-details-body">
+            <p>
+              Perancangan antarmuka dan pengalaman pengguna untuk aplikasi jual beli uang kuno/jadul. Dirancang untuk memudahkan kolektor bertransaksi serta berdiskusi dalam komunitas numismatik.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Fitur & Alur Utama Aplikasi:</strong>
+              <ul>
+                <li><strong>Authentication:</strong> Alur Sign In & Sign Up pengguna yang intuitif.</li>
+                <li><strong>Community Forum:</strong> Wadah diskusi antar kolektor uang kuno.</li>
+                <li><strong>Articles Section:</strong> Edukasi & berita seputar nilai sejarah uang kuno.</li>
+                <li><strong>MoneyShop:</strong> Katalog e-commerce khusus transaksi uang kuno.</li>
+                <li><strong>User Profile:</strong> Manajemen akun dan riwayat aktivitas pengguna.</li>
+              </ul>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://www.figma.com/proto/79i3NaVEoro7jZ8I7Svd6N/MoneyRV?node-id=1-2&t=kXWutJ1D7HU70wGa-1" target="_blank" class="btn-project-link">
+                <i class="fa-brands fa-figma"></i> Coba Interactive Prototype di Figma <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- CARE & REPAIR PROJECT -->
       <div class="project-card">
-        <div class="project-tag">Database & System Design</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-shirt"></i></div>
+          <div class="project-tag">Database & System Design</div>
+        </div>
         <h3>Care & Repair - Premium Fashion Service Platform</h3>
         <p class="project-role">Mata Kuliah: Information System Analysis & Design</p>
-        <p>
-          Platform penyedia jasa perawatan & perbaikan (<em>cleaning & repair</em>) khusus produk <em>fashion premium</em> seperti tas kulit, sepatu branded, dan barang mewah lainnya dengan estimasi harga otomatis dan integrasi kurir QR Code.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Arsitektur & Komponen Utama Sistem:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li><strong>Database Architecture (ERD):</strong> Pemodelan entitas Customer, Order Service, Workshop & Stock, Courier Delivery, hingga Payment & Review.</li>
-            <li><strong>3-Tier Architecture:</strong> Pemisahan Presentation Tier (Mobile App), Application Tier (Core Business Logic), dan Data Tier (MySQL Database).</li>
-            <li><strong>Infrastruktur System:</strong> Perancangan spesifikasi server aplikasi, database MySQL, dan kriteria client app.</li>
-            <li><strong>System Diagrams:</strong> Penyusunan Use Case Diagram, Sequence Diagram, State Diagram, serta DFD Level 0–2.</li>
-          </ul>
-        </div>
+        <p class="project-tagline">Rancangan sistem perawatan fashion premium dengan kurir QR Code.</p>
 
         <div class="tech-stack">
           <span>MySQL</span>
@@ -268,41 +288,41 @@
           <span>Use Case Diagram</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px; display: flex; flex-direction: column; gap: 8px;">
-          <a href="Care and repair.pdf" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen System Design (PDF) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & dokumen</summary>
+          <div class="project-details-body">
+            <p>
+              Platform penyedia jasa perawatan & perbaikan (<em>cleaning & repair</em>) khusus produk <em>fashion premium</em> seperti tas kulit, sepatu branded, dan barang mewah lainnya dengan estimasi harga otomatis dan integrasi kurir QR Code.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Arsitektur & Komponen Utama Sistem:</strong>
+              <ul>
+                <li><strong>Database Architecture (ERD):</strong> Pemodelan entitas Customer, Order Service, Workshop & Stock, Courier Delivery, hingga Payment & Review.</li>
+                <li><strong>3-Tier Architecture:</strong> Pemisahan Presentation Tier (Mobile App), Application Tier (Core Business Logic), dan Data Tier (MySQL Database).</li>
+                <li><strong>Infrastruktur System:</strong> Perancangan spesifikasi server aplikasi, database MySQL, dan kriteria client app.</li>
+                <li><strong>System Diagrams:</strong> Penyusunan Use Case Diagram, Sequence Diagram, State Diagram, serta DFD Level 0–2.</li>
+              </ul>
+            </div>
+
+            <div class="project-actions stacked">
+              <a href="Care and repair.pdf" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen System Design (PDF) <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- WEB DEVELOPMENT PROJECT (FURNILAND) -->
       <div class="project-card">
-        <div class="project-tag">Tugas Project Web</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-couch"></i></div>
+          <div class="project-tag">Tugas Project Web</div>
+        </div>
         <h3>Furniland - E-Commerce Platform</h3>
         <p class="project-role">Mata Kuliah: Programming for Business</p>
-        
-        <p>
-          Aplikasi e-commerce berbasis web yang menyediakan layanan katalog furnitur, manajemen transaksi belanja, hingga panel admin untuk pengelolaan produk, vendor, dan pengguna secara dinamis.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Fitur Utama & Peran Sistem:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li><strong>Guest Access:</strong> Penjelajahan katalog produk & detail furnitur tanpa akses pembelian.</li>
-            <li><strong>Member Features:</strong> Manajemen keranjang (Cart), sistem Checkout, riwayat transaksi (History), serta pembaruan profil & kata sandi.</li>
-            <li><strong>Admin Dashboard:</strong> CRUD lengkap untuk Products & Vendors, pengelolaan akun Users (khusus role member), serta pemantauan detail transaksi konsumen.</li>
-            <li><strong>Database Architecture:</strong> Memanfaatkan 6 tabel utama MySQL (Cart, Products, Transactions, Transaction Details, Users, Vendors).</li>
-          </ul>
-        </div>
-
-        <!-- NOTE AKUN DEMO -->
-        <div class="demo-credentials" style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 10px 12px; margin: 12px 0; text-align: left; font-size: 0.8rem; color: #cbd5e1;">
-          <strong style="color: #38bdf8; display: block; margin-bottom: 4px;"><i class="fa-solid fa-key"></i> Info Akun Demo Login:</strong>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <span><strong>• User/Member:</strong> shanti@gmail.com | <em>Password:</em> Users123</span>
-            <span><strong>• Admin:</strong> admin@gmail.com | <em>Password:</em> admin123</span>
-          </div>
-        </div>
+        <p class="project-tagline">E-commerce furnitur lengkap dengan panel admin & manajemen vendor.</p>
 
         <div class="tech-stack">
           <span>PHP</span>
@@ -312,32 +332,49 @@
           <span>phpMyAdmin</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px;">
-          <a href="http://furniland.infinityfreeapp.com/register.php" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-globe"></i> Kunjungi Live Website Furniland <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & live demo</summary>
+          <div class="project-details-body">
+            <p>
+              Aplikasi e-commerce berbasis web yang menyediakan layanan katalog furnitur, manajemen transaksi belanja, hingga panel admin untuk pengelolaan produk, vendor, dan pengguna secara dinamis.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Fitur Utama & Peran Sistem:</strong>
+              <ul>
+                <li><strong>Guest Access:</strong> Penjelajahan katalog produk & detail furnitur tanpa akses pembelian.</li>
+                <li><strong>Member Features:</strong> Manajemen keranjang (Cart), sistem Checkout, riwayat transaksi (History), serta pembaruan profil & kata sandi.</li>
+                <li><strong>Admin Dashboard:</strong> CRUD lengkap untuk Products & Vendors, pengelolaan akun Users (khusus role member), serta pemantauan detail transaksi konsumen.</li>
+                <li><strong>Database Architecture:</strong> Memanfaatkan 6 tabel utama MySQL (Cart, Products, Transactions, Transaction Details, Users, Vendors).</li>
+              </ul>
+            </div>
+
+            <div class="demo-credentials">
+              <strong><i class="fa-solid fa-key"></i> Info Akun Demo Login:</strong>
+              <div class="demo-lines">
+                <span><strong>• User/Member:</strong> shanti@gmail.com | <em>Password:</em> Users123</span>
+                <span><strong>• Admin:</strong> admin@gmail.com | <em>Password:</em> admin123</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="http://furniland.infinityfreeapp.com/register.php" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-globe"></i> Kunjungi Live Website Furniland <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- PROJECT RUMAH SAKIT -->
       <div class="project-card">
-        <div class="project-tag">Database Systems & Data Warehouse</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-hospital"></i></div>
+          <div class="project-tag">Database Systems & Data Warehouse</div>
+        </div>
         <h3>Perancangan Arsitektur Database & Analisis Sistem Rumah Sakit</h3>
         <p class="project-role">Peran: System & Database Architect</p>
-        
-        <p>
-          Studi komprehensif mengenai analisis kebutuhan bisnis, proses bisnis finansial, dan pemodelan data terintegrasi pada rumah sakit swasta. Proyek ini membahas penyusunan Business Rules, Conceptual & Logical ERD, Normalisasi (1NF–3NF), pemodelan NoSQL (Key-Value, Document, Column, Graph), implementasi Data Warehouse & OLAP Cube, hingga perencanaan Data Mining & Machine Learning untuk prediksi risiko penolakan klaim BPJS.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Ruang Lingkup & Pencapaian Utama:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li><strong>Operational Data & Star Schema:</strong> Merancang pemodelan fakta dan dimensi untuk klaim medis serta analisis finansial rumah sakit.</li>
-            <li><strong>Business Rules & Normalization:</strong> Menyusun aturan bisnis komprehensif, ERD konseptual/logikal, serta normalisasi hingga 3NF.</li>
-            <li><strong>Multi-Model NoSQL:</strong> Mengimplementasikan struktur Key-Value, Document, Column-Family, dan Graph DB untuk mengelola data medis tak terstruktur.</li>
-            <li><strong>Predictive Analytics:</strong> Mengintegrasikan rancangan Data Mining & Machine Learning untuk pencegahan risiko klaim BPJS tertolak.</li>
-          </ul>
-        </div>
+        <p class="project-tagline">Arsitektur database & analitik prediktif klaim BPJS rumah sakit.</p>
 
         <div class="tech-stack">
           <span>System Analysis</span>
@@ -347,38 +384,47 @@
           <span>Data Mining</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px; display: flex; flex-direction: column; gap: 8px;">
-          <a href="RS Part 1.pdf" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-file-pdf"></i> 1. Operational Data, Star Schema & Data Mining (PDF) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-          <a href="RS Part 2.pdf" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-file-pdf"></i> 2. Business Rules, ERD & Normalization (PDF) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-          <a href="RS Part 3.pdf" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-file-pdf"></i> 3. Multi-Model NoSQL Representation (PDF) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & 3 dokumen PDF</summary>
+          <div class="project-details-body">
+            <p>
+              Studi komprehensif mengenai analisis kebutuhan bisnis, proses bisnis finansial, dan pemodelan data terintegrasi pada rumah sakit swasta. Proyek ini membahas penyusunan Business Rules, Conceptual & Logical ERD, Normalisasi (1NF–3NF), pemodelan NoSQL (Key-Value, Document, Column, Graph), implementasi Data Warehouse & OLAP Cube, hingga perencanaan Data Mining & Machine Learning untuk prediksi risiko penolakan klaim BPJS.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Ruang Lingkup & Pencapaian Utama:</strong>
+              <ul>
+                <li><strong>Operational Data & Star Schema:</strong> Merancang pemodelan fakta dan dimensi untuk klaim medis serta analisis finansial rumah sakit.</li>
+                <li><strong>Business Rules & Normalization:</strong> Menyusun aturan bisnis komprehensif, ERD konseptual/logikal, serta normalisasi hingga 3NF.</li>
+                <li><strong>Multi-Model NoSQL:</strong> Mengimplementasikan struktur Key-Value, Document, Column-Family, dan Graph DB untuk mengelola data medis tak terstruktur.</li>
+                <li><strong>Predictive Analytics:</strong> Mengintegrasikan rancangan Data Mining & Machine Learning untuk pencegahan risiko klaim BPJS tertolak.</li>
+              </ul>
+            </div>
+
+            <div class="project-actions stacked">
+              <a href="RS Part 1.pdf" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-file-pdf"></i> 1. Operational Data, Star Schema & Data Mining (PDF) <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+              <a href="RS Part 2.pdf" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-file-pdf"></i> 2. Business Rules, ERD & Normalization (PDF) <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+              <a href="RS Part 3.pdf" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-file-pdf"></i> 3. Multi-Model NoSQL Representation (PDF) <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
       <!-- PERSONAL PROJECT: PYTHON FLASK WEATHER & QUIZ APP -->
       <div class="project-card">
-        <div class="project-tag">Personal Project</div>
+        <div class="project-card-head">
+          <div class="project-icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+          <div class="project-tag">Personal Project</div>
+        </div>
         <h3>Weather Predictor & Interactive Quiz Web App</h3>
         <p class="project-role">Peran: Full-Stack Developer & Database Designer</p>
-
-        <p>
-          Aplikasi web interaktif yang dikembangkan menggunakan Python Framework (Flask). Web ini menyajikan pencarian prediksi cuaca secara real-time via API integrasi serta modul kuis interaktif yang melatih & menguji kemampuan pengelolaan database relasional.
-        </p>
-
-        <div class="project-contributions" style="margin: 12px 0; text-align: left;">
-          <strong style="font-size: 0.9rem; color: #38bdf8;">Fitur & Kapabilitas Utama:</strong>
-          <ul style="font-size: 0.85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: #cbd5e1;">
-            <li><strong>API Weather Integration:</strong> Pencarian live prediksi cuaca berbagai lokasi secara dinamis menggunakan API eksternal.</li>
-            <li><strong>Interactive Quiz Engine:</strong> Modul soal kuis interaktif untuk menguji pemahaman teknis.</li>
-            <li><strong>Database & Leaderboard System:</strong> Implementasi struktur database relasional untuk menyimpan data skor, profil pengguna, serta kalkulasi perangkaan Leaderboard secara otomatis.</li>
-            <li><strong>Flask Backend Deployment:</strong> Di-deploy secara live menggunakan lingkungan PythonAnywhere.</li>
-          </ul>
-        </div>
+        <p class="project-tagline">Web Flask: prediksi cuaca real-time + kuis interaktif & leaderboard.</p>
 
         <div class="tech-stack">
           <span>Python</span>
@@ -390,56 +436,70 @@
           <span>PythonAnywhere</span>
         </div>
 
-        <div class="project-actions" style="margin-top: 15px;">
-          <a href="https://shantiwidyanti.pythonanywhere.com" target="_blank" class="btn-project-link" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600;">
-            <i class="fa-solid fa-globe"></i> Kunjungi Live Web App (PythonAnywhere) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
-          </a>
-        </div>
+        <details class="project-details">
+          <summary>Lihat detail & live app</summary>
+          <div class="project-details-body">
+            <p>
+              Aplikasi web interaktif yang dikembangkan menggunakan Python Framework (Flask). Web ini menyajikan pencarian prediksi cuaca secara real-time via API integrasi serta modul kuis interaktif yang melatih & menguji kemampuan pengelolaan database relasional.
+            </p>
+
+            <div class="project-contributions">
+              <strong class="contrib-label">Fitur & Kapabilitas Utama:</strong>
+              <ul>
+                <li><strong>API Weather Integration:</strong> Pencarian live prediksi cuaca berbagai lokasi secara dinamis menggunakan API eksternal.</li>
+                <li><strong>Interactive Quiz Engine:</strong> Modul soal kuis interaktif untuk menguji pemahaman teknis.</li>
+                <li><strong>Database & Leaderboard System:</strong> Implementasi struktur database relasional untuk menyimpan data skor, profil pengguna, serta kalkulasi perangkaan Leaderboard secara otomatis.</li>
+                <li><strong>Flask Backend Deployment:</strong> Di-deploy secara live menggunakan lingkungan PythonAnywhere.</li>
+              </ul>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://shantiwidyanti.pythonanywhere.com" target="_blank" class="btn-project-link">
+                <i class="fa-solid fa-globe"></i> Kunjungi Live Web App (PythonAnywhere) <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
+              </a>
+            </div>
+          </div>
+        </details>
       </div>
 
     </div>
   </section>
 
   <!-- SERTIFIKASI -->
-  <section id="certifications" class="section">
+  <section id="certifications" class="section" data-accent="amber" data-num="04">
+    <span class="section-eyebrow">Bab 04 &middot; Bukti Formal</span>
     <h2>Certifications & Professional Training</h2>
     <p class="section-subtitle">Sertifikasi profesional, pelatihan resmi, dan pengakuan akademik yang telah diselesaikan maupun sedang ditempuh.</p>
 
     <!-- SUB-SEKTOR ISPM BINUS UNIVERSITY -->
-    <div class="cert-category-card" style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 24px; margin-top: 24px; margin-bottom: 24px;">
-      <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
-        
-        <div style="flex: 1; min-width: 280px;">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-            <span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">
-              <i class="fa-solid fa-award"></i> Academic Certification
-            </span>
-            <span style="font-size: 0.85rem; color: #94a3b8;">Genap 2024/2025 – Ganjil 2025/2026</span>
+    <div class="cert-category-card">
+      <div class="cert-category-layout">
+
+        <div class="cert-category-text">
+          <div class="cert-meta-row">
+            <span class="cert-pill"><i class="fa-solid fa-award"></i> Academic Certification</span>
+            <span class="cert-period">Genap 2024/2025 – Ganjil 2025/2026</span>
           </div>
 
-          <h3 style="margin: 0 0 6px 0; font-size: 1.3rem; color: #f8fafc;">Information System Project Member (ISPM)</h3>
-          <p style="margin: 0 0 12px 0; font-size: 0.9rem; color: #38bdf8; font-weight: 500;">
-            Information Systems Laboratory, School of Information Systems — BINUS University
-          </p>
+          <h3 class="cert-title">Information System Project Member (ISPM)</h3>
+          <p class="cert-publisher">Information Systems Laboratory, School of Information Systems — BINUS University</p>
 
-          <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;">
+          <p class="cert-desc">
             Sertifikat pengakuan resmi atas kontribusi aktif dan dedikasi dalam pengembangan sistem informasi. Berfokus pada perancangan <strong>Website Development</strong> dan partisipasi riset mendalam pada bidang <strong>Research in Information Systems</strong>.
           </p>
 
-          <div class="tech-stack" style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; color: #cbd5e1;">Website Development</span>
-            <span style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; color: #cbd5e1;">IS Research</span>
-            <span style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; color: #cbd5e1;">System Analysis</span>
-            <span style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; color: #cbd5e1;">BINUS IS Laboratory</span>
+          <div class="tech-stack">
+            <span>Website Development</span>
+            <span>IS Research</span>
+            <span>System Analysis</span>
+            <span>BINUS IS Laboratory</span>
           </div>
         </div>
 
-        <div style="width: 240px; flex-shrink: 0;">
-          <div class="media-thumb" onclick="openModal('sertifikat ispm.png')" style="cursor: pointer; position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(56, 189, 248, 0.3); background: #1e293b; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="sertifikat ispm.png" alt="Preview Sertifikat ISPM BINUS" style="width: 100%; height: auto; display: block;">
-            <span class="thumb-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 6px; font-size: 0.75rem; text-align: center; font-weight: 600;">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> Klik Preview Sertifikat
-            </span>
+        <div class="cert-thumb-wrap">
+          <div class="media-thumb" onclick="openModal('sertifikat ispm.png')">
+            <img src="sertifikat ispm.png" alt="Preview Sertifikat ISPM BINUS">
+            <span class="thumb-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Klik Preview Sertifikat</span>
           </div>
         </div>
 
@@ -447,77 +507,76 @@
     </div>
 
     <!-- SUB-SEKTOR AWS ACADEMY -->
-    <div class="cert-category-card" style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 24px;">
-      <div class="cert-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-        <img src="aws logo.png" alt="AWS Academy Logo" style="height: 48px; object-fit: contain; background: #fff; padding: 6px 12px; border-radius: 8px;">
+    <div class="cert-category-card">
+      <div class="cert-header">
+        <img src="aws logo.png" alt="AWS Academy Logo" class="cert-header-logo">
         <div>
-          <h3 style="margin: 0; font-size: 1.3rem; color: #f8fafc;">AWS Academy</h3>
-          <span style="font-size: 0.85rem; color: #94a3b8;">Official Training & Certification Courses</span>
+          <h3 class="cert-title">AWS Academy</h3>
+          <span class="cert-period">Official Training & Certification Courses</span>
         </div>
       </div>
 
-      <div class="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+      <div class="cert-grid">
         <!-- KUBIK 1: AWS CLOUD COMPUTING FOUNDATION -->
-        <div class="cert-cube" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="cert-cube">
           <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="fa-solid fa-cloud" style="color: #38bdf8; font-size: 1.2rem;"></i>
-              <span style="font-size: 0.75rem; color: #38bdf8; font-weight: 600; text-transform: uppercase;">Completed</span>
+            <div class="cert-cube-head">
+              <i class="fa-solid fa-cloud"></i>
+              <span class="cert-status">Completed</span>
             </div>
-            <h4 style="margin: 0 0 12px 0; font-size: 1rem; color: #f1f5f9;">AWS Cloud Computing Foundation</h4>
+            <h4>AWS Cloud Computing Foundation</h4>
           </div>
-          <a href="https://www.credly.com/badges/44010d47-6a8c-4e55-ba3e-c8dee1abcb4a" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600; margin-top: 12px;">
-            <i class="fa-solid fa-award"></i> View Credly Badge <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+          <a href="https://www.credly.com/badges/44010d47-6a8c-4e55-ba3e-c8dee1abcb4a" target="_blank" class="credly-link">
+            <i class="fa-solid fa-award"></i> View Credly Badge <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
           </a>
         </div>
 
         <!-- KUBIK 2: AWS CLOUD MACHINE LEARNING -->
-        <div class="cert-cube" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="cert-cube">
           <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="fa-solid fa-brain" style="color: #38bdf8; font-size: 1.2rem;"></i>
-              <span style="font-size: 0.75rem; color: #38bdf8; font-weight: 600; text-transform: uppercase;">Completed</span>
+            <div class="cert-cube-head">
+              <i class="fa-solid fa-brain"></i>
+              <span class="cert-status">Completed</span>
             </div>
-            <h4 style="margin: 0 0 12px 0; font-size: 1rem; color: #f1f5f9;">AWS Cloud Machine Learning</h4>
+            <h4>AWS Cloud Machine Learning</h4>
           </div>
-          <a href="https://www.credly.com/badges/3e9e5a3b-4b05-4f5e-8b22-72420b107a22" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600; margin-top: 12px;">
-            <i class="fa-solid fa-award"></i> View Credly Badge <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+          <a href="https://www.credly.com/badges/3e9e5a3b-4b05-4f5e-8b22-72420b107a22" target="_blank" class="credly-link">
+            <i class="fa-solid fa-award"></i> View Credly Badge <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
           </a>
         </div>
 
         <!-- KUBIK 3: AWS DATA ANALYTICS -->
-        <div class="cert-cube" style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="cert-cube">
           <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="fa-solid fa-chart-pie" style="color: #38bdf8; font-size: 1.2rem;"></i>
-              <span style="font-size: 0.75rem; color: #38bdf8; font-weight: 600; text-transform: uppercase;">Completed</span>
+            <div class="cert-cube-head">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span class="cert-status">Completed</span>
             </div>
-            <h4 style="margin: 0 0 12px 0; font-size: 1rem; color: #cbd5e1;">AWS Data Analytics</h4>
+            <h4>AWS Data Analytics</h4>
           </div>
-          <a href="https://www.credly.com/badges/0a57a4fe-7a16-4b5e-b9dc-17ac7116078a" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #38bdf8; text-decoration: none; font-weight: 600; margin-top: 12px;">
-            <i class="fa-solid fa-award"></i> View Credly Badge <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+          <a href="https://www.credly.com/badges/0a57a4fe-7a16-4b5e-b9dc-17ac7116078a" target="_blank" class="credly-link">
+            <i class="fa-solid fa-award"></i> View Credly Badge <i class="fa-solid fa-arrow-up-right-from-square link-ext"></i>
           </a>
         </div>
 
         <!-- KUBIK 4: AWS ARCHITECTING -->
-        <div class="cert-cube" style="background: rgba(15, 23, 42, 0.4); border: 1px dashed rgba(148, 163, 184, 0.3); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="cert-cube in-progress">
           <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-              <i class="fa-solid fa-sitemap" style="color: #94a3b8; font-size: 1.2rem;"></i>
-              <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase;">In Progress</span>
+            <div class="cert-cube-head">
+              <i class="fa-solid fa-sitemap"></i>
+              <span class="cert-status is-pending">In Progress</span>
             </div>
-            <h4 style="margin: 0 0 12px 0; font-size: 1rem; color: #cbd5e1;">AWS Architecting</h4>
+            <h4>AWS Architecting</h4>
           </div>
-          <span style="font-size: 0.85rem; color: #e2e8f0; font-style: italic; font-weight: 500; margin-top: 12px;">
-            <i class="fa-regular fa-clock"></i> Coming Soon
-          </span>
+          <span class="cert-pending"><i class="fa-regular fa-clock"></i> Coming Soon</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- RESEARCH SECTION -->
-  <section id="research" class="section">
+  <section id="research" class="section" data-accent="teal" data-num="05">
+    <span class="section-eyebrow">Bab 05 &middot; Akademik</span>
     <h2 class="section-title">Research & Publications</h2>
     <p class="section-subtitle">Makalah ilmiah dan penelitian akademis yang telah dipublikasikan.</p>
 
@@ -553,7 +612,7 @@
 
           <a href="https://www.instagram.com/p/DcvFNhHDqeI/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" class="media-thumb link-thumb">
             <img src="congrats binus.jpg" alt="BINUS ISPM Acceptance">
-            <span class="thumb-label"><i class="fa-brands fa-instagram"></i> Official Announcement <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem; margin-left: auto;"></i></span>
+            <span class="thumb-label"><i class="fa-brands fa-instagram"></i> Official Announcement <i class="fa-solid fa-arrow-up-right-from-square link-ext push-end"></i></span>
           </a>
 
           <div class="media-thumb full-width">
@@ -568,12 +627,13 @@
   </section>
 
   <!-- KEAHLIAN & PENGHARGAAN -->
-  <section id="skills" class="section">
+  <section id="skills" class="section" data-accent="pink" data-num="06">
+    <span class="section-eyebrow">Bab 06 &middot; Penutup</span>
     <h2>Keahlian & Penghargaan</h2>
     <div class="skills-wrapper">
       <div class="skills-box">
         <h3>Hard Skills</h3>
-        <div class="tags" style="margin-bottom: 20px;">
+        <div class="tags tags-spaced">
           <span>System Documentation</span>
           <span>Data Modeling</span>
           <span>Advanced Excel</span>
@@ -590,7 +650,7 @@
         </div>
 
         <h3>Soft Skills</h3>
-        <div class="tags" style="margin-bottom: 20px;">
+        <div class="tags tags-spaced">
           <span>Communication & Stakeholder Management</span>
           <span>Adaptability</span>
           <span>Teaching & Simplification</span>
@@ -606,30 +666,22 @@
 
       <div class="skills-box">
         <h3>Penghargaan</h3>
-        <div class="awards-list" style="display: flex; flex-direction: column; gap: 20px;">
-          <div class="award-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-            <h4 style="margin: 0 0 6px 0; color: #f8fafc; font-size: 1rem;">SIS Appreciation Day Award (2025)</h4>
-            <p style="margin: 0 0 12px 0; font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">
-              Top 3% mahasiswa berprestasi di School of Information Systems BINUS University.
-            </p>
-            <div class="media-thumb" onclick="openModal('certificate sis award.png')" style="cursor: pointer; position: relative; border-radius: 8px; overflow: hidden; max-width: 220px; border: 1px solid rgba(255, 255, 255, 0.15);">
-              <img src="certificate sis award.png" alt="Preview SIS Award Certificate" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-              <span class="thumb-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 6px; font-size: 0.75rem; text-align: center; font-weight: 600;">
-                <i class="fa-solid fa-magnifying-glass-plus"></i> Klik Preview Sertifikat
-              </span>
+        <div class="awards-list">
+          <div class="award-item">
+            <h4>SIS Appreciation Day Award (2025)</h4>
+            <p>Top 3% mahasiswa berprestasi di School of Information Systems BINUS University.</p>
+            <div class="media-thumb award-thumb" onclick="openModal('certificate sis award.png')">
+              <img src="certificate sis award.png" alt="Preview SIS Award Certificate">
+              <span class="thumb-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Klik Preview Sertifikat</span>
             </div>
           </div>
 
-          <div class="award-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px;">
-            <h4 style="margin: 0 0 6px 0; color: #f8fafc; font-size: 1rem;">Mentor Scholarship Recipient</h4>
-            <p style="margin: 0 0 12px 0; font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">
-              Penerima beasiswa atas keunggulan akademik & kontribusi mentoring dalam SASC Mentoring Program.
-            </p>
-            <div class="media-thumb" onclick="openModal('SASC Mentor scholarship.png')" style="cursor: pointer; position: relative; border-radius: 8px; overflow: hidden; max-width: 220px; border: 1px solid rgba(255, 255, 255, 0.15);">
-              <img src="SASC Mentor scholarship.png" alt="Preview Mentor Scholarship Certificate" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-              <span class="thumb-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 6px; font-size: 0.75rem; text-align: center; font-weight: 600;">
-                <i class="fa-solid fa-magnifying-glass-plus"></i> Klik Preview Sertifikat
-              </span>
+          <div class="award-item">
+            <h4>Mentor Scholarship Recipient</h4>
+            <p>Penerima beasiswa atas keunggulan akademik & kontribusi mentoring dalam SASC Mentoring Program.</p>
+            <div class="media-thumb award-thumb" onclick="openModal('SASC Mentor scholarship.png')">
+              <img src="SASC Mentor scholarship.png" alt="Preview Mentor Scholarship Certificate">
+              <span class="thumb-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Klik Preview Sertifikat</span>
             </div>
           </div>
         </div>
@@ -672,6 +724,39 @@
         closeModal();
       }
     });
+
+    // --- SCROLL SPY: navbar ikut berubah warna sesuai section aktif ---
+    (function () {
+      const accentRGB = {
+        indigo: '129,140,248',
+        cyan: '56,189,248',
+        violet: '192,132,252',
+        amber: '251,191,36',
+        teal: '45,212,191',
+        pink: '244,114,182'
+      };
+      const sections = document.querySelectorAll('[data-accent]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      const root = document.documentElement;
+
+      if ('IntersectionObserver' in window && sections.length) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const accent = entry.target.getAttribute('data-accent');
+              if (accentRGB[accent]) {
+                root.style.setProperty('--live-accent', accentRGB[accent]);
+              }
+              navLinks.forEach((a) => {
+                a.classList.toggle('active', a.getAttribute('data-accent') === accent);
+              });
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+        sections.forEach((s) => observer.observe(s));
+      }
+    })();
   </script>
 </body>
 </html>
