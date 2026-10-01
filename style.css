@@ -588,13 +588,20 @@ img { max-width: 100%; }
   border: 1px solid var(--card-border);
   background: var(--card-bg);
   box-shadow: 0 10px 25px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  transition: transform .4s var(--ease), border-color .3s ease, box-shadow .3s ease, background-color .3s ease;
+  transition: transform .4s var(--ease), border-color .3s ease, box-shadow .3s ease, background-color .3s ease, opacity .28s ease;
 }
 
 .project-card:hover { 
   transform: translateY(-6px); 
   border-color: var(--accent); 
   box-shadow: 0 18px 38px rgba(0, 0, 0, .35), 0 0 25px rgba(var(--accent-rgb), 0.18);
+}
+
+/* state transisi saat difilter: fade + scale dulu sebelum benar-benar dilepas dari layout */
+.project-card.filter-hide {
+  opacity: 0;
+  transform: scale(.93) translateY(6px);
+  pointer-events: none;
 }
 
 .project-card.is-filtered-out { display: none; }
@@ -678,7 +685,14 @@ img { max-width: 100%; }
 
 .project-details[open] summary::after { transform: rotate(180deg); }
 
-.project-details-body { margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.project-details-body {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  transition: max-height .35s var(--ease), opacity .3s ease;
+}
 .project-contributions { margin: 12px 0; text-align: left; }
 .contrib-label { font-size: .9rem; color: var(--accent); font-weight: 700; }
 .project-contributions ul { font-size: .85rem; padding-left: 18px; margin-top: 6px; line-height: 1.5; color: var(--text-soft); }
@@ -1078,19 +1092,21 @@ img { max-width: 100%; }
   -webkit-backdrop-filter: blur(8px);
   justify-content: center;
   align-items: center;
-  animation: fadeIn .3s ease;
+  opacity: 0;
+  transition: opacity .25s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+.modal.is-visible { opacity: 1; }
 
 .modal-content { 
   max-width: 92%; max-height: 86vh; border-radius: 14px; object-fit: contain; 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.1);
-  transition: transform .3s var(--ease);
+  transform: scale(.9);
+  opacity: 0;
+  transition: transform .3s var(--ease), opacity .3s ease;
 }
+
+.modal.is-visible .modal-content { transform: scale(1); opacity: 1; }
 
 .close-btn { 
   position: absolute; top: 20px; right: 30px; color: #ffffff; font-size: 44px; font-weight: 300; cursor: pointer; 
@@ -1112,6 +1128,55 @@ footer {
   font-weight: 600;
   border-top: 1px solid #1e293b;
   transition: background .3s ease;
+}
+
+/* ---------- MICRO-INTERACTIONS: FEEDBACK SAAT DIKLIK ---------- */
+/* Tanpa ini, klik terasa "hidup tapi gak ngerasa" — nggak ada sinyal kalau
+   tombol beneran kepencet. Efeknya cuma beberapa milidetik, tapi kerasa. */
+
+a, button, summary { -webkit-tap-highlight-color: transparent; }
+
+.btn-primary:active,
+.btn-outline:active,
+.btn-pdf:active,
+.cert-link:active,
+.project-filter:active,
+.nav-links a:active {
+  transform: scale(.96);
+  transition-duration: .1s;
+}
+
+.btn-project-link:active,
+.credly-link:active {
+  transform: scale(.96);
+  transition-duration: .1s;
+}
+
+.contact-item:active {
+  transform: translateX(4px) scale(.97);
+  transition-duration: .1s;
+}
+
+.media-thumb:active {
+  transform: scale(.95);
+  transition-duration: .1s;
+}
+
+.close-btn:active {
+  transform: scale(.85) rotate(90deg);
+  transition-duration: .1s;
+}
+
+.tags span:active {
+  transform: translateY(-1px) scale(.94);
+  transition-duration: .1s;
+}
+
+.project-details summary {
+  transition: opacity .2s ease, transform .12s ease;
+}
+.project-details summary:active {
+  transform: scale(.97);
 }
 
 /* ---------- RESPONSIVE ---------- */
