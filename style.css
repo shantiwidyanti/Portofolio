@@ -41,6 +41,18 @@
   --card-border: #334155;
 }
 
+/* Bab 03: Proyek Official - Royal Navy Theme (beda dari biru dusty di atas, lebih tegas & prestisius) */
+[data-accent="navy"] {
+  --section-bg: #0b1437;
+  --accent: #3b82f6;
+  --accent-rgb: 59, 130, 246;
+  --text-main: #ffffff;
+  --text-soft: #bfdbfe;
+  --text-muted: #93c5fd;
+  --card-bg: #121d4d;
+  --card-border: #1e3a8a;
+}
+
 /* Bab 03: Tugas & Project Kuliah - Deep Violet Theme */
 [data-accent="violet"] { 
   --section-bg: #3b0764;
@@ -502,7 +514,7 @@ img { max-width: 100%; }
 .metric-title { font-size: .8rem; font-weight: 800; color: var(--text-main); letter-spacing: .6px; margin: 6px 0 8px; text-transform: uppercase; }
 .metric-desc { font-size: .84rem; color: var(--text-soft); line-height: 1.5; margin: 0; position: relative; z-index: 1; }
 
-/* ---------- BAB 03: PROJECT KULIAH ---------- */
+/* ---------- BAB 04: PROJECT KULIAH ---------- */
 .project-filter-wrap {
   margin: 1.5rem 0 2rem;
   padding: 1rem 1.1rem;
@@ -720,7 +732,7 @@ img { max-width: 100%; }
 }
 .btn-project-link:hover { gap: 13px; color: #ffffff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 
-/* ---------- BAB 04: SERTIFIKASI ---------- */
+/* ---------- BAB 05: SERTIFIKASI ---------- */
 .cert-category-card {
   position: relative;
   background: var(--card-bg);
@@ -825,7 +837,7 @@ img { max-width: 100%; }
 
 .cert-pending { font-size: .85rem; color: var(--text-muted); font-style: italic; font-weight: 500; margin-top: 12px; display: inline-block; }
 
-/* ---------- BAB 05: RISET ---------- */
+/* ---------- BAB 06: RISET ---------- */
 .research-card {
   padding: clamp(1.5rem, 4vw, 2.6rem);
   border-radius: 26px;
@@ -901,7 +913,7 @@ img { max-width: 100%; }
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 18px rgba(255, 255, 255, 0.4);
 }
 
-/* ---------- BAB 06: KEAHLIAN & PENGHARGAAN ---------- */
+/* ---------- BAB 07: KEAHLIAN & PENGHARGAAN ---------- */
 .skills-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-top: 1.5rem; align-items: start; }
 
 .skills-box {
