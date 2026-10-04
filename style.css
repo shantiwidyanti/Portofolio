@@ -1131,9 +1131,6 @@ footer {
 }
 
 /* ---------- MICRO-INTERACTIONS: FEEDBACK SAAT DIKLIK ---------- */
-/* Tanpa ini, klik terasa "hidup tapi gak ngerasa" — nggak ada sinyal kalau
-   tombol beneran kepencet. Efeknya cuma beberapa milidetik, tapi kerasa. */
-
 a, button, summary { -webkit-tap-highlight-color: transparent; }
 
 .btn-primary:active,
