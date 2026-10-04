@@ -15,7 +15,6 @@
   --live-accent: 107, 15, 36;
 }
 
-
 /* ---------- SKEMA WARNA TIAP BAB (BACKGROUND FULL WARNA TEMA) ---------- */
 
 /* Bab 01: Tentang - Burgundy Theme */
@@ -107,7 +106,8 @@
 
 html { 
   scroll-behavior: smooth; 
-  scroll-padding-top: 6rem; 
+  /* Berikan padding top sekitar 80px - 90px agar pas persis di bawah floating navbar */
+  scroll-padding-top: 5rem; 
   scrollbar-color: #475569 #0f172a; 
   scrollbar-width: thin; 
 }
@@ -1132,6 +1132,9 @@ footer {
 }
 
 /* ---------- MICRO-INTERACTIONS: FEEDBACK SAAT DIKLIK ---------- */
+/* Tanpa ini, klik terasa "hidup tapi gak ngerasa" — nggak ada sinyal kalau
+   tombol beneran kepencet. Efeknya cuma beberapa milidetik, tapi kerasa. */
+
 a, button, summary { -webkit-tap-highlight-color: transparent; }
 
 .btn-primary:active,
